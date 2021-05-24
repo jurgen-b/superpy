@@ -40,23 +40,43 @@ Daarbij wordt ook gecontroleerd of dat de map al bestaat zodat niet alles wordt 
 Bij view_inventory wordt in 1 tabel alles per aankoop laten zien, maar er is ook een duidelijkere tabel met een samenvatting per product waardoor als er snel gekeken moet worden voor nieuwe inkopen, het meteen duidelijk is hoeveel van welk product en wat de eerste houdbaarheidsdatum is van het desbetreffende product is.
  
 ┏━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+
 ┃ product    ┃ buy date   ┃ buy price ┃ expiration date ┃ status ┃
+
 ┡━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+
 │ lemon      │ 2021-05-18 │   1.25    │   2021-05-25    │ bought │
+
 │ pear       │ 2021-05-18 │    1.5    │   2021-05-25    │ bought │
+
 │ apple      │ 2021-05-18 │    2.0    │   2021-05-25    │ bought │
+
 │ apple      │ 2021-05-18 │    2.0    │   2021-06-20    │ bought │
+
 │ apple      │ 2021-05-18 │     1     │   2021-06-20    │ bought │
+
 └────────────┴────────────┴───────────┴─────────────────┴────────┘
+
 ┏━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━┓
+
 ┃ product    ┃ count ┃ first expiration ┃
+
 ┡━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━┩
+
 │ pear       │ 1     │    2021-05-25    │
+
 │ lemon      │ 1     │    2021-05-25    │
+
 │ apple      │ 3     │    2021-05-25    │
+
 │ kiwi       │ 0     │    9999-99-99    │
+
 │ banaan     │ 0     │    9999-99-99    │
+
 │ aardbij    │ 0     │    9999-99-99    │
+
 │ sinasappel │ 0     │    9999-99-99    │
+
 │ ananas     │ 0     │    9999-99-99    │
+
 └────────────┴───────┴──────────────────┘
