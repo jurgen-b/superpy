@@ -30,7 +30,8 @@ def main():
 
     def create_files():
         os.mkdir(files_map)
-        with open(now.strftime(os.path.join(files_map,'today.txt'), 'w')) as file:
+        today_txt=os.path.join(files_map,'today.txt')
+        with open(now.strftime(os.path.join(today_txt), 'w')) as file:
             file.write(datetime.datetime.today().strftime('%Y-%m-%d'))
         with open(os.path.join(files_map,'itemlist.csv'), 'w', newline='') as file:
             writer = csv.writer(file)
