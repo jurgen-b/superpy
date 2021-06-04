@@ -31,25 +31,25 @@ def main():
     def create_files():
         os.mkdir(files_map)
         today_txt=os.path.join(files_map,'today.txt')
-        with open(now.strftime(os.path.join(today_txt), 'w')) as file:
+        with open(os.path.join(today_txt), 'w') as file:
             file.write(datetime.datetime.today().strftime('%Y-%m-%d'))
         with open(os.path.join(files_map,'itemlist.csv'), 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['product','buy_price','sell_price',])
-        with open(os.path.join(files_map,'buy.csv', 'w', newline=''))as file:
+        with open(os.path.join(files_map,'buy.csv'), 'w', newline='')as file:
             writer = csv.writer(file)
             writer.writerow(['bought_id','product','buy_date','buy_price','quantity','expiration_date','status'])
-        with open(os.path.join(files_map,'id.txt', 'w')) as file:
+        with open(os.path.join(files_map,'id.txt'), 'w') as file:
             file.write('1')
         with open(os.path.join(files_map,'sold.csv'), 'w', newline='')as file:
             writer = csv.writer(file)
             writer.writerow(['sell_id','bought_id','product','buy_date','sell_date','buy_price','sell_price','quantity','status'])
-        with open(os.paht.join(current_directory,'readme.txt'), 'w') as file:
+        with open(os.path.join(current_directory,'readme.txt'), 'w') as file:
             file.write(' usage guide : \n'
             'dependeties:\n'
-            'numpy v:  \n'
-            'rich v: \n'
-            'mathplot v: \n'
+            'numpy v:1.20.3  \n'
+            'rich v:10.2.1 \n'
+            'mathplot v:3.4.2 \n'
             '\n'
             'to use this program start with -h command so u know the commands that are usable.\n'
             'inventory  shows the currend inventory and the count of the items there is on the itemlist.\n'
@@ -246,7 +246,7 @@ def main():
             return
         else:
             print ('the item is sold out')
-            (exit)
+            exit()
 
     # get buy/sell price
     def get_price(product, buy_or_sell):
@@ -345,6 +345,7 @@ def main():
         sell_price = get_price( product_name, 'sell_price')
         quantity = 1
         status = 'sold'
+        print('you have sold')
         print(sold)
         #sold.status = 'sold'
         new_row = sell_id, bought_id, product_name, sell_date, buy_price, sell_price , quantity, status
