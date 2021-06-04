@@ -18,7 +18,6 @@ __human_name__ = 'superpy'
 # make the export function 
 
 def main():
-    pass
 
     current_directory = os.getcwd()
     files_map = os.path.join(current_directory,'files')
