@@ -1,0 +1,5 @@
+requirements:
+numpy v:1.20.3  
+rich v:10.2.1 
+mathplot v:3.4.2 
+

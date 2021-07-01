@@ -1,9 +1,4 @@
  usage guide : 
-dependeties:
-numpy v:1.20.3  
-rich v:10.2.1 
-mathplot v:3.4.2 
-
 to use this program start with python main.py -h command so you know the commands that are usable.
 
 python main.py inventory  shows the currend inventory and the count of the items there is on the itemlist.
